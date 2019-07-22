@@ -1,2 +1,4 @@
-### Documentation URL
-Please find the documentation [here](https://hmtmcse.github.io/tm-react-doc/)
+### [Documentation](https://tm-react.github.io/)
+
+### Documentation Source
+Please find the documentation source [here](https://github.com/hmtmcse/tm-react-doc.git)
