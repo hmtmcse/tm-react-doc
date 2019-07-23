@@ -17,3 +17,6 @@ git clone https://github.com/hmtmcse/tm-node-console.git
 cd ..
 echo "Installing Yarn";
 yarn install
+
+echo "Cloning TM React Website From GitHub";
+git clone https://github.com/tm-react/tm-react.github.io.git website

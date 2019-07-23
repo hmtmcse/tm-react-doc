@@ -11,15 +11,19 @@ git add docs
 git commit -m "Updated at `date '+%H:%M:%S %A %d-%B, %Y'`"
 git push --all
 
-rm -rf website
-cp -a docs website
-cp README.md website
-cp LICENSE website
+
+exit 0
+
 cd website
-git init
+rm -rf static
+cp -a ../docs/static .
+rm -rf 404.html
+cp -a ../docs/404.html .
+rm -rf assets.json
+cp -a ../docs/assets.json .
+rm -rf index.html
+cp -a ../docs/index.html .
+
 git add --all
-git commit -m "Updated at `date '+%H:%M:%S %A %d-%B, %Y'`"
-git remote add origin https://github.com/tm-react/tm-react.github.io.git
-git push origin master --force
-cd ..
-rm -rf website
+git commit -m "Last Updated at `date '+%H:%M:%S %A %d-%B, %Y'`"
+git push --all
