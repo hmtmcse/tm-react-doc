@@ -6,7 +6,7 @@ import TRLayoutInfoData from "tm-react/src/artifacts/data/view/tr-layout-info-da
 const MyLayout = React.lazy(() => import('../view/layouts/my-layout'));
 const MyView = React.lazy(() => import('../view/my-view'));
 const Demo = React.lazy(() => import('react-mui-ui/ui/tr-ui-demo'));
-const Form = React.lazy(() => import('react-mui-ui/demo/form-demo'));
+const Form = React.lazy(() => import('../../demo/form-demo'));
 
 export default class URLMapping extends TRURLMapping {
 
