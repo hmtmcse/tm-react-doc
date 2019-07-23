@@ -1,0 +1,44 @@
+---
+name: Form
+route: /react-mui-ui/tr-form
+menu: React MUI UI
+---
+
+import { Playground, Props } from 'docz'
+import TRComponent from "tm-react/src/artifacts/component/tr-component";
+import {TRProps, TRState} from "tm-react/src/artifacts/model/tr-model";
+import {TrFormDefinitionData} from "tm-react/src/artifacts/data/tr-form-definition-data";
+import TRComponentState from "tm-react/src/artifacts/component/tr-component-state";
+import {Button, TextField} from "react-mui-ui/ui/ui-component";
+import {TRMessageData} from "tm-react/src/artifacts/data/tr-message-data";
+
+
+# Form
+
+<Playground>
+    {() => {
+        class ExampleButton extends React.Component {
+              constructor(props) {
+                super(props);
+                this.state = { inverted: false };
+                this.handleClick = this.handleClick.bind(this);
+              }
+        
+              handleClick(e) {
+                e.preventDefault();
+                this.setState(prevState => ({ inverted: !prevState.inverted }));
+              }
+        
+              render() {
+                const { inverted } = this.state;
+                return (
+                  <Button onClick={this.handleClick} inverted={inverted}>
+                    {inverted ? "Inverted" : "Default"}
+                  </Button>
+                );
+              }
+            }
+            return <ExampleButton />;
+      }
+    }
+</Playground>
