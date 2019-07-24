@@ -24,16 +24,7 @@ export default class FormDemo extends TRComponent<Props, State> {
         this.addFormDefinition("password", new TrFormDefinitionData({
             required: true,
             errorMessage: "Please Enter Password",
-            helpText: "Please xyz",
-            fillValue: false,
-            customValidation: {
-                validate(fieldName: string, value: any, formData: { [p: string]: any }): TRMessageData {
-                    console.log(fieldName);
-                    console.log(value);
-                    console.log(formData);
-                    return TRMessageData.failed("Sueecss");
-                }
-            }
+
         }));
     }
 
@@ -49,9 +40,15 @@ export default class FormDemo extends TRComponent<Props, State> {
                 <form onSubmit={(event: any) => {
                     this.onSubmit(event)
                 }} noValidate>
-                    <TextField {...this.handleInputDataChange("email")} label="Email Address"/>
-                    <br/>
-                    <TextField {...this.handleInputDataChange("password")} type="password" label="Password"/>
+                    {/*<TextField {...this.handleInputDataChange("email")} label="Email Address"/>*/}
+                    {/*<br/>*/}
+                    {/*<TextField {...this.handleInputDataChange("password")} type="password" label="Password"/>*/}
+
+                    <TextField {...this.handleInputDataChange("email")} type="email" label="Email Address" margin="normal" fullWidth required/>
+
+                    <TextField {...this.handleInputDataChange("password")} type="password" label="Password" margin="normal" fullWidth required/>
+
+
                     <br/>
                     <TextField {...this.handleInputDataChange("file")} type="file" label="file"/><br/>
                     <TextField {...this.handleInputDataChange("file")} type="file" label="file" inputProps={{
