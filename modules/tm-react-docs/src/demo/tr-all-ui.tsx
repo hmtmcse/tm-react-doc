@@ -25,6 +25,7 @@ import {TRProgress} from "react-mui-ui/ui/tr-progress";
 import TRDrawer, {SlideSide} from "react-mui-ui/ui/tr-drawer";
 import TRVerticalNestedList from "react-mui-ui/ui/tr-vertical-nested-list";
 import TRSelect from "react-mui-ui/ui/tr-select";
+import TRPagination from "react-mui-ui/ui/tr-pagination";
 
 class DemoState implements TRState{
     public showFlashMessage: boolean = false;
@@ -395,6 +396,7 @@ export default class AllUiDemo extends TRReactComponent<DemoProps, DemoState> {
             <TRSelect actions={dropdownList.getList()}/>
 
             {this.title("Pagination")}
+              <TRPagination/>
             {this.title("Navigation")}
             {this.title("Searchable Dropdown")}
 
