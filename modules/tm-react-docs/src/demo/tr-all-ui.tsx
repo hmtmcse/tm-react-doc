@@ -10,7 +10,7 @@ import {
     Table,
     TableBody,
     TableCell,
-    TableRow
+    TableRow, TextField
 } from "react-mui-ui/ui/ui-component";
 import {TRDropdownDataHelper, TRListDataHelper, TRTableActionDataHelper, TRTableHeaderDataHelper} from "react-mui-ui/ui/tr-ui-data";
 
@@ -24,6 +24,7 @@ import TRTableAction from "react-mui-ui/ui/tr-table-action";
 import {TRProgress} from "react-mui-ui/ui/tr-progress";
 import TRDrawer, {SlideSide} from "react-mui-ui/ui/tr-drawer";
 import TRVerticalNestedList from "react-mui-ui/ui/tr-vertical-nested-list";
+import TRSelect from "react-mui-ui/ui/tr-select";
 
 class DemoState implements TRState{
     public showFlashMessage: boolean = false;
@@ -384,12 +385,14 @@ export default class AllUiDemo extends TRReactComponent<DemoProps, DemoState> {
             </Table>
 
             {this.title("Dropdown Action")}
-
             <ButtonGroup variant="contained" color="primary">
                 <Button >My Profile Name</Button>
                 <TRDropdown clickIcon={ExpandMoreIcon} actions={dropdownAction.getList()}/>
             </ButtonGroup>
 
+
+            {this.title("Select")}
+            <TRSelect actions={dropdownList.getList()}/>
 
             {this.title("Pagination")}
             {this.title("Navigation")}

@@ -1,9 +1,9 @@
 import React from 'react';
 import TRURLMapping from "tm-react/src/artifacts/config/tr-url-mapping";
 import TRLayoutInfoData from "tm-react/src/artifacts/data/view/tr-layout-info-data";
+import MyLayout from "../view/layouts/my-layout";
 
 
-const MyLayout = React.lazy(() => import('../view/layouts/my-layout'));
 const MyView = React.lazy(() => import('../view/my-view'));
 const Form = React.lazy(() => import('../../demo/form-demo'));
 const AllUI = React.lazy(() => import('../../demo/tr-all-ui'));
