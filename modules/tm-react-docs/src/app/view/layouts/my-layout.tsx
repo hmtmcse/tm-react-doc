@@ -8,7 +8,6 @@ export default class MyLayout extends TRReactComponent<any, any> {
         const {component, route, appConfig} = this.props;
         return (
             <React.Fragment>
-            <p>My layout</p>
                 <TRLayoutRenderer route={route} appConfig={appConfig} component={component}/>
         </React.Fragment>
         );

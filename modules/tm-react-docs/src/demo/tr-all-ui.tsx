@@ -396,7 +396,7 @@ export default class AllUiDemo extends TRReactComponent<DemoProps, DemoState> {
             <TRSelect actions={dropdownList.getList()}/>
 
             {this.title("Pagination")}
-              <TRPagination/>
+              {/*<TRPagination/>*/}
             {this.title("Navigation")}
             {this.title("Searchable Dropdown")}
 

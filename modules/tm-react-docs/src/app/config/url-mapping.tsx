@@ -2,6 +2,7 @@ import React from 'react';
 import TRURLMapping from "tm-react/src/artifacts/config/tr-url-mapping";
 import TRLayoutInfoData from "tm-react/src/artifacts/data/view/tr-layout-info-data";
 import MyLayout from "../view/layouts/my-layout";
+import PanelView from "../../demo/panel-view";
 
 
 const MyView = React.lazy(() => import('../view/my-view'));
@@ -15,6 +16,7 @@ export default class URLMapping extends TRURLMapping {
 
         let publicLayoutInfo: TRLayoutInfoData = new TRLayoutInfoData();
         publicLayoutInfo.layout = MyLayout
+        publicLayoutInfo.addPageInstance("/panel", PanelView);
         publicLayoutInfo.addPageInstance("/form", Form);
         publicLayoutInfo.addPageInstance("/", AllUI);
         publicLayoutInfo.addPageInstance("/other", MyView);
