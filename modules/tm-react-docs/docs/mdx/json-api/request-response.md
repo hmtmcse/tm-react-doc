@@ -1,6 +1,6 @@
 ---
 name: API Request Response
-route: /json-api/request-response.md
+route: /json-api/request-response
 menu: JSON API
 ---
 
