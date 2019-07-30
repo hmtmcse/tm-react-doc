@@ -33,6 +33,12 @@ export default {
     menu: [
         "Bismillah",
         {
+            name: "JSON API",
+            menu: [
+                'API Request Response'
+            ]
+        },
+        {
             name: 'TM React',
             menu: [
                 'Layout',
